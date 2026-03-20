@@ -10,13 +10,13 @@ steps:
   displayName: Login to ACR
   inputs:
     command: login
-    containerRegistry: 'acraz2026'
+    containerRegistry: 'myrego'
 - task: Docker@2
   inputs:
     command: buildAndPush
     repository: aspnetcorecontainer
     dockerfile: Dockerfile
-    containerRegistry: 'acraz2026'
+    containerRegistry: 'myrego'
     tags: latest
 - task: AzureContainerApps@1
   inputs:

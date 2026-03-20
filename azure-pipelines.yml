@@ -21,7 +21,7 @@ steps:
 - task: AzureContainerApps@1
   inputs:
     azureSubscription: 'Azure subscription 1(6bde7e67-047b-42c1-9576-47ef47761443)'
-    acrName: 'acraz2026'
-    imageToDeploy: 'aspnetcorecontainer:latest'
+    acrName: 'myrego'
+    imageToDeploy: 'myrego.azurecr.io/aspnetcorecontainer:latest'
     containerAppName: 'aca-az2006'
     resourceGroup: 'mine'

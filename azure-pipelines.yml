@@ -6,6 +6,13 @@ pool:
   name: default
 
 steps:
+- task: Docker@2
+  inputs:
+    command: buildAndPush
+    repository: aspnetcorecontainer
+    dockerfile: Dockerfile
+    containerRegistry: 'acraz2026'
+    tags: latest
 - task: AzureContainerApps@1
   inputs:
     azureSubscription: 'Azure subscription 1(6bde7e67-047b-42c1-9576-47ef47761443)'

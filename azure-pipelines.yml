@@ -7,6 +7,11 @@ pool:
 
 steps:
 - task: Docker@2
+  displayName: Login to ACR
+  inputs:
+    command: login
+    containerRegistry: 'acraz2026'
+- task: Docker@2
   inputs:
     command: buildAndPush
     repository: aspnetcorecontainer

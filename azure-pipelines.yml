@@ -25,3 +25,10 @@ steps:
     imageToDeploy: 'myrego.azurecr.io/aspnetcorecontainer:latest'
     containerAppName: 'aca-az2006'
     resourceGroup: 'mine'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'myrego'
+    repository: 'myapp'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
